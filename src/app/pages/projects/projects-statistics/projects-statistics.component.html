@@ -1,1 +1,4 @@
-<p>projects-statistics works!</p>
+<app-statistic-card [number]="projectStatistics.backlog" text="Backlog"></app-statistic-card>
+<app-statistic-card [number]="projectStatistics.inProgress" text="In Progress"></app-statistic-card>
+<app-statistic-card [number]="projectStatistics.completed" text="Completos"></app-statistic-card>
+<app-statistic-card [number]="projectStatistics.total" text="Total"></app-statistic-card>

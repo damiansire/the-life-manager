@@ -6,6 +6,7 @@ import { ProjectsStatisticsComponent } from './projects-statistics/projects-stat
 import { ProjectsListComponent } from './projects-list/projects-list.component';
 import { ProjectCardComponent } from './projects-list/project-card/project-card.component';
 import { ProjectsPageComponent } from './projects-page.component';
+import { StatisticCardComponent } from './projects-statistics/statistics-card/statistic-card.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProjectsPageComponent } from './projects-page.component';
     ProjectsStatisticsComponent,
     ProjectsListComponent,
     ProjectCardComponent,
+    StatisticCardComponent,
   ],
   imports: [CommonModule, ProjectsRoutingModule],
 })
-export class ProjectsModule {}
+export class ProjectsModule { }

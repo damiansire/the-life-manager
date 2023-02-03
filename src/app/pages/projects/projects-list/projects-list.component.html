@@ -1,1 +1,3 @@
-<app-project-card></app-project-card>
+<div *ngFor="let project of projects">
+    <app-project-card [project]="project"></app-project-card>
+</div>
