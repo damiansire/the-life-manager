@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Project } from 'src/app/interfaces/project.interface';
 
 @Component({
-  selector: 'app-projects-list',
-  templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.scss']
+  selector: 'app-projects-card-list',
+  templateUrl: './projects-card-list.component.html',
+  styleUrls: ['./projects-card-list.component.scss']
 })
-export class ProjectsListComponent implements OnInit {
+export class ProjectsCardListComponent implements OnInit {
 
   @Input() projects: Project[];
 

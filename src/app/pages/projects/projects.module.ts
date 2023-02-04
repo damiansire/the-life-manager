@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsStatisticsComponent } from './projects-statistics/projects-statistics.component';
-import { ProjectsListComponent } from './projects-list/projects-list.component';
-import { ProjectCardComponent } from './projects-list/project-card/project-card.component';
+import { ProjectsCardListComponent } from './projects-card-list/projects-card-list.component';
+import { ProjectCardComponent } from './projects-card-list/project-card/project-card.component';
 import { ProjectsPageComponent } from './projects-page.component';
 import { StatisticCardComponent } from './projects-statistics/statistics-card/statistic-card.component';
 
@@ -12,7 +12,7 @@ import { StatisticCardComponent } from './projects-statistics/statistics-card/st
   declarations: [
     ProjectsPageComponent,
     ProjectsStatisticsComponent,
-    ProjectsListComponent,
+    ProjectsCardListComponent,
     ProjectCardComponent,
     StatisticCardComponent,
   ],
