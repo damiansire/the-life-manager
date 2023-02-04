@@ -1,12 +1,20 @@
+export enum Stack {
+    javascript,
+    angular,
+    tailwindcss,
+}
+
 export enum ProjectStatus {
     backlog,
     inProgress,
     completed,
+    abandoned
 }
 
 export interface Project {
     name: string,
-    projectStatus: ProjectStatus
+    projectStatus: ProjectStatus,
+    stack: Stack[]
 }
 
 export interface GeneralProjectStatistics {

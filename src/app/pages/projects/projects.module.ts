@@ -8,6 +8,7 @@ import { ProjectCardComponent } from './projects-card-list/project-card/project-
 import { ProjectsPageComponent } from './projects-page.component';
 import { StatisticCardComponent } from './projects-statistics/statistics-card/statistic-card.component';
 import { ProjectsTableListComponent } from './projects-table-list/projects-table-list.component';
+import { BadgeModule } from 'src/app/shared/badge/badge.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,6 @@ import { ProjectsTableListComponent } from './projects-table-list/projects-table
     ProjectsCardListComponent,
     ProjectsTableListComponent,
   ],
-  imports: [CommonModule, ProjectsRoutingModule],
+  imports: [CommonModule, ProjectsRoutingModule, BadgeModule],
 })
 export class ProjectsModule { }
