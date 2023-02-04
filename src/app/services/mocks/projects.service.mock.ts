@@ -13,7 +13,7 @@ export const getProjectsReponseMock: GetProjectsReponse = {
         },
         {
             name: 'Life Manager2',
-            projectStatus: ProjectStatus.completed,
+            projectStatus: ProjectStatus.finalized,
             stack: [Stack.angular, Stack.tailwindcss]
 
         },
@@ -24,7 +24,7 @@ export const getProjectsReponseMock: GetProjectsReponse = {
         },
         {
             name: 'Life Manager4',
-            projectStatus: ProjectStatus.abandoned,
+            projectStatus: ProjectStatus.discontinued,
             stack: [Stack.git]
         },
     ]

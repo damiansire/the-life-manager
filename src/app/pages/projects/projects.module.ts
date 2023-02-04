@@ -9,6 +9,7 @@ import { ProjectsPageComponent } from './projects-page.component';
 import { StatisticCardComponent } from './projects-statistics/statistics-card/statistic-card.component';
 import { ProjectsTableListComponent } from './projects-table-list/projects-table-list.component';
 import { IconModule } from 'src/app/shared/icon/icon.module';
+import { ChipModule } from 'src/app/shared/chip/chip.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,6 @@ import { IconModule } from 'src/app/shared/icon/icon.module';
     ProjectsCardListComponent,
     ProjectsTableListComponent,
   ],
-  imports: [CommonModule, ProjectsRoutingModule, IconModule],
+  imports: [CommonModule, ProjectsRoutingModule, IconModule, ChipModule],
 })
 export class ProjectsModule { }

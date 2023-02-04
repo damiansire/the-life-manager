@@ -6,10 +6,10 @@ export enum Stack {
 }
 
 export enum ProjectStatus {
-    backlog,
-    inProgress,
-    completed,
-    abandoned
+    backlog = "Backlog",
+    inProgress = "In Progress",
+    finalized = "Finalized",
+    discontinued = "Discontinued"
 }
 
 export interface Project {
