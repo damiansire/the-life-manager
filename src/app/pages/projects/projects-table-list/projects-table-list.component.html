@@ -78,13 +78,14 @@
             <tr class="text-gray-600 text-sm leading-normal text-left">
                 <th class="py-3 px-6 font-medium text-left">Project</th>
                 <th class="py-3 px-6 font-medium text-left">Client</th>
-                <th class="py-3 px-6 font-medium text-center">Users</th>
+                <th class="py-3 px-6 font-medium text-center">Stack</th>
                 <th class="py-3 px-6 font-medium text-center">Status</th>
                 <th class="py-3 px-6 font-medium text-center">Actions</th>
             </tr>
         </thead>
         <tbody class="text-gray-600 text-sm font-light">
-            <tr class="border-b border-gray-200 hover:bg-gray-100">
+
+            <tr class="border-b border-gray-200 hover:bg-gray-100" *ngFor="let project of projects">
                 <td class="py-3 px-6 text-left whitespace-nowrap">
                     <div class="flex items-center">
                         <div class="mr-2">
@@ -102,7 +103,7 @@
                                 <circle cx="24" cy="24" r="4" fill="#80deea"></circle>
                             </svg>
                         </div>
-                        <span class="font-medium">React Project</span>
+                        <span class="font-medium">{{project.name}}</span>
                     </div>
                 </td>
                 <td class="py-3 px-6 text-left">
@@ -115,12 +116,9 @@
                 </td>
                 <td class="py-3 px-6 text-center">
                     <div class="flex items-center justify-center">
-                        <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125"
-                            src="https://randomuser.me/api/portraits/men/1.jpg" />
-                        <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125"
-                            src="https://randomuser.me/api/portraits/women/2.jpg" />
-                        <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125"
-                            src="https://randomuser.me/api/portraits/men/3.jpg" />
+                        <ng-container *ngFor="let technologyName of project.stack">
+                            <app-icon [iconName]="technologyName" class="rounded-full hover:scale-125"></app-icon>
+                        </ng-container>
                     </div>
                 </td>
                 <td class="py-3 px-6 text-center">
@@ -563,7 +561,4 @@
             </tr>
         </tbody>
     </table>
-</div>
-<div class="bg-blue-50 flex">
-
 </div>

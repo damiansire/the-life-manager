@@ -1,7 +1,8 @@
 export enum Stack {
-    javascript,
-    angular,
-    tailwindcss,
+    javascript = "javascript",
+    angular = "angular",
+    tailwindcss = "tailwindcss",
+    git = "git",
 }
 
 export enum ProjectStatus {

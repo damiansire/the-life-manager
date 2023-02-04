@@ -9,7 +9,7 @@ export const getProjectsReponseMock: GetProjectsReponse = {
         {
             name: 'Life Manager',
             projectStatus: ProjectStatus.backlog,
-            stack: [Stack.angular, Stack.tailwindcss]
+            stack: [Stack.angular, Stack.tailwindcss, Stack.git]
         },
         {
             name: 'Life Manager2',
@@ -20,12 +20,12 @@ export const getProjectsReponseMock: GetProjectsReponse = {
         {
             name: 'Life Manager3',
             projectStatus: ProjectStatus.inProgress,
-            stack: [Stack.angular, Stack.tailwindcss]
+            stack: [Stack.angular, Stack.git]
         },
         {
             name: 'Life Manager4',
             projectStatus: ProjectStatus.abandoned,
-            stack: [Stack.angular, Stack.tailwindcss]
+            stack: [Stack.git]
         },
     ]
 }
