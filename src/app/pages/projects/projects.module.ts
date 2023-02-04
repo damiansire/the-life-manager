@@ -8,7 +8,6 @@ import { ProjectCardComponent } from './projects-card-list/project-card/project-
 import { ProjectsPageComponent } from './projects-page.component';
 import { StatisticCardComponent } from './projects-statistics/statistics-card/statistic-card.component';
 import { ProjectsTableListComponent } from './projects-table-list/projects-table-list.component';
-import { ProjectTableRowComponent } from './projects-table-list/project-table-row/project-table-row.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { ProjectTableRowComponent } from './projects-table-list/project-table-ro
     StatisticCardComponent,
     ProjectsCardListComponent,
     ProjectsTableListComponent,
-    ProjectTableRowComponent,
   ],
   imports: [CommonModule, ProjectsRoutingModule],
 })
