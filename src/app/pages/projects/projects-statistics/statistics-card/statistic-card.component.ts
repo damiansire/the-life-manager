@@ -18,18 +18,20 @@ export class StatisticCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get progressBarClasses() {
-    let progressBarClasses = '';
+  progressBarClasses() {
+    let progressBarClass = '';
+    if (this.total) {
+      const percent = Math.trunc(this.number / this.total * 28);
+      const precentClass = `w-${percent} `
+      progressBarClass += precentClass;
+    }
+
     if (this.projectStatus) {
       const colorStatus = getProjectColorStatus(this.projectStatus) || 'purple';
       const colorClass = `bg-${colorStatus}-500`
-      progressBarClasses += colorClass;
+      progressBarClass += colorClass;
     }
-    if (this.total) {
-      const percent = this.number / this.total;
-
-    }
-    return `colorClass`
+    return { progressBarClass: true };
   }
 
 

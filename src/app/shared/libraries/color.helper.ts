@@ -6,10 +6,9 @@ import { ProjectStatus } from "src/app/interfaces/project.interface";
 *eg: 'red'
 */
 export const getProjectColorStatus = (status: ProjectStatus) => {
-    const projectStatusColor: { [key: string]: string; } = {}
-    projectStatusColor[ProjectStatus.backlog] = "yellow"
-    projectStatusColor[ProjectStatus.inProgress] = "blue"
-    projectStatusColor[ProjectStatus.finalized] = "green"
-    projectStatusColor[ProjectStatus.discontinued] = "red"
-    return projectStatusColor[status];
+    if (status === ProjectStatus.backlog) { return "yellow" }
+    if (status === ProjectStatus.inProgress) { return "blue" }
+    if (status === ProjectStatus.finalized) { return "green" }
+    if (status === ProjectStatus.discontinued) { return "red" }
+    return "red";
 }

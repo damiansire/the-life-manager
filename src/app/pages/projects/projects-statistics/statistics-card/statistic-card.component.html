@@ -12,9 +12,10 @@
                 / {{total}}
             </span>
         </p>
-        <div class="relative h-2 bg-gray-200 rounded w-28">
-            <div class="absolute top-0 left-0 w-2/3 h-2 bg-green-500 rounded">
-            </div>
+
+    </div>
+    <div class="relative h-2 bg-gray-200 rounded w-28" *ngIf="total">
+        <div class="absolute top-0 left-0 h-2 rounded" [ngClass]="progressBarClasses()">
         </div>
     </div>
 </div>
