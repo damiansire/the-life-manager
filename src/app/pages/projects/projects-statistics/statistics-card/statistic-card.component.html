@@ -1,2 +1,20 @@
-{{number}}
-{{text}}
+<div class="p-4 bg-white shadow-lg rounded-2xl dark:bg-gray-800">
+    <div class="flex justify-center">
+        <p class="text-black text-md dark:text-white text-lg">
+            {{projectStatus || text}}
+        </p>
+    </div>
+    <div class="flex flex-col justify-start">
+
+        <p class="mb-4 mt-1 text-4xl font-bold text-center text-gray-700 dark:text-gray-100">
+            {{number}}
+            <span class="text-sm" *ngIf="total">
+                / {{total}}
+            </span>
+        </p>
+        <div class="relative h-2 bg-gray-200 rounded w-28">
+            <div class="absolute top-0 left-0 w-2/3 h-2 bg-green-500 rounded">
+            </div>
+        </div>
+    </div>
+</div>

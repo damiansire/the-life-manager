@@ -1,11 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProjectStatus } from 'src/app/interfaces/project.interface';
-
-const chipColor: { [key: string]: string; } = {}
-chipColor[ProjectStatus.backlog] = "bg-yellow-200 text-yellow-600"
-chipColor[ProjectStatus.inProgress] = "bg-blue-200 text-blue-600"
-chipColor[ProjectStatus.finalized] = "bg-green-200 text-green-600"
-chipColor[ProjectStatus.discontinued] = "bg-red-200 text-red-600"
+import { getProjectColorStatus } from '../libraries/color.helper';
 
 @Component({
   selector: 'app-chip',
@@ -14,12 +9,15 @@ chipColor[ProjectStatus.discontinued] = "bg-red-200 text-red-600"
 })
 export class ChipComponent {
 
-  @Input() text: string;
+  @Input() text: ProjectStatus;
 
   get backgroundColorClass() {
-    return chipColor[this.text] || "bg-purple-200 text-purple-600"
+    const colorStatus = getProjectColorStatus(this.text) || 'purple'
+    return `bg-${colorStatus}-200 text-${colorStatus}-600`
   }
+
   constructor() { }
+
 
 
 }

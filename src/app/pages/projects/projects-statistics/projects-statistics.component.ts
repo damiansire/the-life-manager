@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GeneralProjectStatistics } from 'src/app/interfaces/project.interface';
+import { GeneralProjectStatistics, ProjectStatus } from 'src/app/interfaces/project.interface';
 
 @Component({
   selector: 'app-projects-statistics',
@@ -7,7 +7,7 @@ import { GeneralProjectStatistics } from 'src/app/interfaces/project.interface';
   styleUrls: ['./projects-statistics.component.scss']
 })
 export class ProjectsStatisticsComponent implements OnInit {
-
+  ProjectStatus = ProjectStatus;
   @Input() projectStatistics: GeneralProjectStatistics;
 
   constructor() { }

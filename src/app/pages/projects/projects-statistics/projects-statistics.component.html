@@ -1,4 +1,9 @@
-<app-statistic-card [number]="projectStatistics.backlog" text="Backlog"></app-statistic-card>
-<app-statistic-card [number]="projectStatistics.inProgress" text="In Progress"></app-statistic-card>
-<app-statistic-card [number]="projectStatistics.completed" text="Completos"></app-statistic-card>
-<app-statistic-card [number]="projectStatistics.total" text="Total"></app-statistic-card>
+<div class="flex flex-wrap justify-evenly">
+    <app-statistic-card [number]="projectStatistics.backlog" [total]="projectStatistics.total"
+        [projectStatus]="ProjectStatus.backlog"></app-statistic-card>
+    <app-statistic-card [number]="projectStatistics.inProgress" [total]="projectStatistics.total"
+        [projectStatus]="ProjectStatus.inProgress"></app-statistic-card>
+    <app-statistic-card [number]="projectStatistics.completed" [total]="projectStatistics.total"
+        [projectStatus]="ProjectStatus.finalized"></app-statistic-card>
+    <app-statistic-card [number]="projectStatistics.total" text="Total"></app-statistic-card>
+</div>
