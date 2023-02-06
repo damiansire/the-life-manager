@@ -1,6 +1,6 @@
 <app-projects-statistics [projectStatistics]="projectStatistics"></app-projects-statistics>
 <div class="flex justify-end">
-    <app-switch-buttons></app-switch-buttons>
+    <app-switch-buttons (selectedButton$)="changedButton($event)"></app-switch-buttons>
 </div>
-<app-projects-card-list [projects]="projects" *ngIf="false"></app-projects-card-list>
-<app-projects-table-list [projects]="projects"></app-projects-table-list>
+<app-projects-table-list [projects]="projects" *ngIf="selectedButton === 'table'"></app-projects-table-list>
+<app-projects-card-list [projects]="projects" *ngIf="selectedButton === 'list'"></app-projects-card-list>

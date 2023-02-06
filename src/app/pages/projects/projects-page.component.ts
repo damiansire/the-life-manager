@@ -9,7 +9,8 @@ import { ProjectsService } from 'src/app/services/projects.service';
 export class ProjectsPageComponent implements OnInit {
 
   projectStatistics: GeneralProjectStatistics;
-  projects: Project[]
+  projects: Project[];
+  selectedButton = "table"
 
   constructor(private projectsService: ProjectsService) { }
 
@@ -18,6 +19,10 @@ export class ProjectsPageComponent implements OnInit {
       this.projectStatistics = data
       this.projects = data.projects
     }))
+  }
+
+  changedButton(buttonSelected: string) {
+    this.selectedButton = buttonSelected;
   }
 }
 

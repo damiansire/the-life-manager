@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProjectStatus } from 'src/app/interfaces/project.interface';
-import { getProjectColorStatus } from '../libraries/color.helper';
+import { getProjectColorStatus } from '../libs/color.helper';
 
 @Component({
   selector: 'app-chip',
