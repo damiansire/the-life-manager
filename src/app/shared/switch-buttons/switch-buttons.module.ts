@@ -10,6 +10,7 @@ import { SwitchButtonsComponent } from './switch-buttons.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [SwitchButtonsComponent]
 })
 export class SwitchButtonsModule { }

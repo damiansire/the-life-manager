@@ -1,17 +1,15 @@
-<div class='flex items-center justify-center min-h-screen from-purple-500 via-indigo-500 to-pink-400 bg-gradient-to-br'>
-    <div class='w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl items-center justify-center flex'>
-        <span class="p-1 inline-flex border bg-gray-200 rounded-md">
-            <button class="px-2 py-1 rounded">
-                <svg class="text-gray-600" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 12h18M3 6h18M3 18h18" />
-                </svg>
-            </button>
-            <button class="px-2 py-1 bg-white rounded shadow">
-                <svg class="text-gray-600" width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        d="M12.933 3.555v18m0-18h7a2 2 0 012 2v14a2 2 0 01-2 2h-7v-18zm0 0h-7a2 2 0 00-2 2v14a2 2 0 002 2h7v-18z" />
-                </svg>
-            </button>
-        </span>
-    </div>
-</div>
+<span class="p-1 inline-flex border bg-gray-200 rounded-md">
+    <button class="px-2 py-1 rounded" [ngClass]="{'bg-white' : selectedButton === 'table' }"
+        (click)="setSelectedButton('table')">
+        <svg class="text-gray-600" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+    </button>
+    <button class="px-2 py-1  rounded shadow" [ngClass]="{'bg-white' : selectedButton === 'list' }"
+        (click)="setSelectedButton('list')">
+        <svg class="text-gray-600" width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                d="M12.933 3.555v18m0-18h7a2 2 0 012 2v14a2 2 0 01-2 2h-7v-18zm0 0h-7a2 2 0 00-2 2v14a2 2 0 002 2h7v-18z" />
+        </svg>
+    </button>
+</span>

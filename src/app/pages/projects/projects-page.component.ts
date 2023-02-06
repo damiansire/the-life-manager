@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GeneralProjectStatistics, Project } from 'src/app/interfaces/project.interface';
 import { ProjectsService } from 'src/app/services/projects.service';
-
 @Component({
   selector: 'app-projects-page',
   templateUrl: './projects-page.component.html',
