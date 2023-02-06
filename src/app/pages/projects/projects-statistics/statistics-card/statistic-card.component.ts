@@ -7,33 +7,25 @@ import { getProjectColorStatus } from 'src/app/shared/libraries/color.helper';
   templateUrl: './statistic-card.component.html',
   styleUrls: ['./statistic-card.component.scss']
 })
-export class StatisticCardComponent implements OnInit {
+export class StatisticCardComponent {
   @Input() number: number;
+  @Input() total: number;
   @Input() projectStatus: ProjectStatus;
   @Input() text: string;
-  @Input() total: number;
+
+  get progressBarLong() {
+    const percent = Math.trunc(this.number / this.total * 100);
+    const precentValue = `${percent}%`
+    return { width: precentValue }
+  }
 
   constructor() { }
 
-  ngOnInit(): void {
+  progressBarColor() {
+    const colorStatus = getProjectColorStatus(this.projectStatus) || 'purple';
+    const colorClass = `bg-${colorStatus}-500`
+    return colorClass;
   }
-
-  progressBarClasses() {
-    let progressBarClass = '';
-    if (this.total) {
-      const percent = Math.trunc(this.number / this.total * 28);
-      const precentClass = `w-${percent} `
-      progressBarClass += precentClass;
-    }
-
-    if (this.projectStatus) {
-      const colorStatus = getProjectColorStatus(this.projectStatus) || 'purple';
-      const colorClass = `bg-${colorStatus}-500`
-      progressBarClass += colorClass;
-    }
-    return { progressBarClass: true };
-  }
-
 
 
 }
