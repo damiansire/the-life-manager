@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProjectStatus } from 'src/app/interfaces/project.interface';
-import { getProjectColorStatus } from 'src/app/shared/lib/color.helper';
+import { getProjectColorStatus } from 'src/app/shared/libs/color.helper';
+
 
 @Component({
   selector: 'app-statistic-card',
