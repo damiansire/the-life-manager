@@ -1,2 +1,5 @@
 {{project.name}}
-{{project.projectStatus}}
+<ng-container *ngFor="let technologyName of project.stack">
+    <app-icon [iconName]="technologyName" class="rounded-full hover:scale-125"></app-icon>
+</ng-container>
+<app-chip [text]="project.projectStatus"></app-chip>
