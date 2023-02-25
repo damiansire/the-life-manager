@@ -1,5 +1,26 @@
-{{project.name}}
-<ng-container *ngFor="let technologyName of project.stack">
-    <app-icon [iconName]="technologyName" class="rounded-full hover:scale-125"></app-icon>
-</ng-container>
-<app-chip [text]="project.projectStatus"></app-chip>
+<div class="rounded overflow-hidden shadow-lg relative">
+
+    <img class="w-full" src="https://source.unsplash.com/random/1600x900" alt="Sunset in the mountains">
+    <div class="absolute top-0 right-0 pt-2 pr-2">
+        <app-chip [text]="project.projectStatus"></app-chip>
+    </div>
+
+    <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{project.name}}</div>
+        <p class="text-gray-700 text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+            perferendis eaque, exercitationem praesentium nihil.
+        </p>
+    </div>
+    <div class="flex justify-between px-6 py-4">
+        <div>
+            ---Progress---
+        </div>
+        <div>
+            <ng-container *ngFor="let technologyName of project.stack">
+                <span class="inline-block"> <app-icon [iconName]="technologyName"
+                        class="rounded-full hover:scale-125"></app-icon></span>
+            </ng-container>
+        </div>
+    </div>
+</div>

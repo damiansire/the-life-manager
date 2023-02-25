@@ -10,7 +10,7 @@ export class ProjectsPageComponent implements OnInit {
 
   projectStatistics: GeneralProjectStatistics;
   projects: Project[];
-  selectedButton = "table"
+  selectedButton = "list"
 
   constructor(private projectsService: ProjectsService) { }
 
